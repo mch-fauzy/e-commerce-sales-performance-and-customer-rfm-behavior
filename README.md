@@ -44,12 +44,12 @@ Berikut adalah kolom yang akan digunakan dalam proses analisis:
 * Customer ID: ID pelanggan
 
 ## Missing Value Handling
-1. Drop Rows with All NaN Values
-`df.dropna(axis=0, how='all', inplace=True)`
-2. Drop Rows if Customer ID is NaN
-`df.dropna(subset=['Customer ID'], axis=0, inplace=True)`
-3. Most Frequent Imputation for NaN under 5%
-Karena NaN pada categorical data dibawah 5%, maka NaN akan di imputasi dengan nilai yang sering muncul.
-`df['sku'].fillna(df['sku'].mode()[0], inplace=True)
-df['status'].fillna(df['status'].mode()[0], inplace=True)
+1. Drop Rows with All NaN Values<br>
+`df.dropna(axis=0, how='all', inplace=True)`<br>
+2. Drop Rows if Customer ID is NaN<br>
+`df.dropna(subset=['Customer ID'], axis=0, inplace=True)`<br>
+3. Most Frequent Imputation for NaN under 5%<br>
+Karena NaN pada categorical data dibawah 5%, maka NaN akan di imputasi dengan nilai yang sering muncul.<br>
+`df['sku'].fillna(df['sku'].mode()[0], inplace=True)<br>
+df['status'].fillna(df['status'].mode()[0], inplace=True)<br>
 df['category_name_1'].fillna(df['category_name_1'].mode()[0], inplace=True)`
