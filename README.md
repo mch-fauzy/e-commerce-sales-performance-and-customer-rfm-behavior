@@ -15,11 +15,12 @@ Perusahaan E-Commerce ingin mengetahui sales performance dan customer behaviour.
 Sebagai Data Analyst, saya bertugas untuk memahami customer behaviour dan rekomendasi apa yang dapat diberikan untuk meningkatkan penjualan dan kepuasan pelanggan.
 
 # Data Cleaning and Preparation
+Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa
+
 ## Drop Unused Columns
-`df.drop(['Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23',
-         'Unnamed: 24', 'Unnamed: 25', 'increment_id',
-         'sales_commission_code', 'Working Date',
-         'BI Status', ' MV ', 'Year', 'M-Y', 'FY', 'Month'], axis=1, inplace=True)`
+Kolom-kolom berikut akan di drop karena tidak digunakan dalam analisa:
+`'Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23', 'Unnamed: 24', 'Unnamed: 25', 'increment_id',
+ 'sales_commission_code', 'Working Date', 'BI Status', ' MV ', 'Year', 'M-Y', 'FY', 'Month'`
 
 Karena item_id unik pada setiap baris sedangkan sku tidak, maka item_id adalah ID transaksi/order bukan ID barang. 
 
