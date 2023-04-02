@@ -50,6 +50,15 @@ Berikut adalah kolom yang akan digunakan dalam proses analisis:
 `df.dropna(subset=['Customer ID'], axis=0, inplace=True)`<br>
 3. Most Frequent Imputation for NaN under 5%<br>
 Karena NaN pada categorical data dibawah 5%, maka NaN akan di imputasi dengan nilai yang sering muncul.<br>
-`df['sku'].fillna(df['sku'].mode()[0], inplace=True)<br>
-df['status'].fillna(df['status'].mode()[0], inplace=True)<br>
-df['category_name_1'].fillna(df['category_name_1'].mode()[0], inplace=True)`
+`df['sku'].fillna(df['sku'].mode()[0], inplace=True)`<br>
+`df['status'].fillna(df['status'].mode()[0], inplace=True)`<br>
+`df['category_name_1'].fillna(df['category_name_1'].mode()[0], inplace=True)`<br>
+
+## Data Types Conversion
+`df['created_at'] = pd.to_datetime(df['created_at'])`<br>
+`df['Customer Since'] = pd.to_datetime(df['Customer Since'])`<br>
+`df['item_id'] = df['item_id'].astype('int').astype('str')`<br>
+`df['Customer ID'] = df['Customer ID'].astype('int').astype('str')`<br>
+
+## Data Consistency and Anomalies
+1. Grouping Common Labels
