@@ -18,7 +18,7 @@ Sebagai Data Analyst, saya bertugas untuk memahami customer behaviour dan rekome
 Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa
 
 ## Drop Unused Columns
-Kolom-kolom berikut akan di drop karena tidak digunakan dalam analisa:
+Kolom-kolom berikut akan di drop karena tidak digunakan dalam analisa:<br>
 `'Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23', 'Unnamed: 24', 'Unnamed: 25', 'increment_id',
  'sales_commission_code', 'Working Date', 'BI Status', ' MV ', 'Year', 'M-Y', 'FY', 'Month'`
 
