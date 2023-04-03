@@ -64,6 +64,53 @@ Karena NaN pada categorical data dibawah 5%, maka NaN akan di imputasi dengan ni
 
 ## Data Consistency and Anomalies
 1. Grouping Common Labels
+ Beberapa label di kolom status memiliki kesamaan arti:
+
+* RECEIVED dan CLOSED menjadi COMPLETE
+* ORDER_REFUNDED dan REFUND menjadi CANCELED
+* PENDING_PAYPAL, PAYMENT_REVIEW, PENDING, HOLDED, EXCHANGE, PAID, dan COD menjadi PROCESSING
+* Label "PROCESSING" dan "FRAUD" sangatlah kecil (0.7 dan 0.001%), jadi bisa di drop jika tidak diperlukan dalam analisis 
+* EASYPAY_MA dan EASYPAY_VOUCHER menjadi EASYPAY
+
+2. Drop Anomalies Data
+Terdapat anomali data pada kolom "status" dan "category_name_1" dengan label "\\N"
+* Karena persentasenya sangat kecil (1%), maka baris dengan label "\\N" akan di drop
+
+3. Replace Anomalies Data
+Terdapat anomali data pada kolom "grand_total" dan "discount_amount", yaitu nilainya ada yang negatif (harga dan diskon seharusnya tidak negatif)
+* Maka akan di filter hanya include grand total dan diskon yang lebih dari 0
+
+## Add New Features (Feature Improvements)
+1. Order Quantity Binning <br>
+`df['qty_bins'] = pd.cut(`
+    `df.qty_ordered,`
+    `bins=[0, 1, 2, 3, 4, 5, 10, 20, 100, 1000],`
+    `include_lowest=True,`
+    `labels=["1", "2", "3", "4", "5", "6-10", "11-20", "21-100", "101-1000"]`
+`)`<br>
+
+2. Monthly Period <br>
+`df["order_month"] = df['created_at'].dt.to_period("M")` <br>
+
+3. Quarter Period <br>
+`df["order_quarter"] = df['created_at'].dt.to_period("Q")` <br>
+
+4. Day of Week <br>
+`dow_mapping = {`
+    `0: "Monday",`
+    `1: "Tuesday",`
+    `2: "Wednesday",`
+    `3: "Thursday",`
+    `4: "Friday",`
+    `5: "Saturday",`
+    `6: "Sunday",`
+`}`
+
+`df["day_of_week"] = df['created_at'].dt.dayofweek`
+`df["day_of_week"] = df["day_of_week"].map(dow_mapping)` <br>
+
+5. Is Complete Order? <br>
+`df["is_complete"] = df['status'].apply(lambda x: 1 if x in ["COMPLETE"] else 0)` <br>
 
 # Exploratory Data Analysis
 Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:<br>
