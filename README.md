@@ -9,7 +9,7 @@
 [Business Understanding](#Business-Understanding)<br>
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
 [Exploratory Data Analysis](#Exploratory-Data-Analysis)<br>
-[Conclusion and Recommendation](#Conclusion-and-Recommenndation)<br>
+[Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
 ## Latar Belakang
@@ -96,3 +96,8 @@ Dari analisis yang telah dilakukan, dapat disimpulkan:
 6. Contoh strategi yang dapat digunakan antara lain rekomendasi produk berdasarkan pembelian sebelumnya, loyalty program, cross-selling, upselling, re-engagement emails, follow-up phone calls atau surveys untuk memahami mengapa mereka belum melakukan pembelian akhir-akhir ini. 
     * Prioritaskan pada segmen Champion, Loyal, Potential, dan New untuk meminimalisir risiko churn
     * Prioritaskan pada segmen At Risk, About to Sleep, dan Can't Lose Them untuk reactivation customers
+
+### Potential Opportunity
+* Soghaat memiliki complete order rate tertinggi tetapi total ordernya rendah. Soghaat adalah produk makanan manis, complete order rate tinggi menunjukkan bahwa customer puas dengan produk dan layanannya. Namun, penting untuk berfokus pada peningkatan total order untuk kategori ini.
+* Pada bulan Juni rata-rata grand total cenderung lebih tinggi dengan rentang mencapai 1.5-1.7 kali rata-rata grand total bulan-bulan lainnya. Perusahaan dapat memanfaatkan tren rata-rata grand total yang lebih tinggi di bulan Juni dengan memberikan penawaran dan promosi untuk menarik lebih banyak customer.
+* Customers dengan frekuensi order tinggi (F 3-4), cenderung memiliki monetary value tinggi (M 3-4) meskipun sudah jarang aktif. Perusahaan bisa melakukan pendekatan pada customer yang jarang aktif (R 1-2) tetapi memiliki FM tinggi untuk dapat meningkatkan penjualan
