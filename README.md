@@ -1,4 +1,4 @@
-# Pakistan E-Commerce Sales Performance and Customer RFM Behaviour
+# Pakistan E-Commerce Sales Performance and Customer RFM Behavior
 | Analysis (PDF) | Dashboard |
 |:---:|:---:|
 | - | [Tableau Story](https://public.tableau.com/views/PakistanE-CommerceSalesPerformanceandCustomerRFMBehaviour/DashboardStory?:language=en-US&:display_count=n&:origin=viz_share_link)
