@@ -8,6 +8,8 @@
 
 [Business Understanding](#Business-Understanding)<br>
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
+[Exploratory Data Analysis](#Exploratory-Data-Analysis)<br>
+[Conclusion and Recommendation](#Conclusion-and-Recommenndation)<br>
 
 # Business Understanding
 ## Latar Belakang
@@ -62,3 +64,35 @@ Karena NaN pada categorical data dibawah 5%, maka NaN akan di imputasi dengan ni
 
 ## Data Consistency and Anomalies
 1. Grouping Common Labels
+
+# Exploratory Data Analysis
+Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:<br>
+[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)
+
+# Conclusion and Recommendation
+## Conclusion
+Dari analisis yang telah dilakukan, dapat disimpulkan:
+* Customer lebih sering membeli produk dengan harga di bawah 939.
+* Lebih dari 80% order memiliki 1 quantity per order dengan rata-rata persentase complete order cenderung diatas 55% pada rentang order quantity 1-3 dan 6-10. Customer lebih memilih untuk melakukan pembelian yang lebih kecil dengan produk yang lebih sedikit per order.
+* Analisis menunjukkan bahwa Men's Fashion dan Mobiles & Tablets adalah kategori tertinggi yang diorder customers, terhitung sekitar 15-20% dari total transaksi. Namun, mereka menunjukkan tingkat complete order rate yang berbeda. Rata-rata complete order rate untuk Mobiles & Tablets (42%) adalah sekitar 15% lebih rendah daripada Men's Fashion (57%).
+* Rata-rata grand total terus meningkat sejak 2017 Q3. Bahkan, meningkat 238% dari Q3 2017 ke Q3 2018 dengan total orders tertinggi terjadi pada Q4. Namun, selama periode waktu yang sama, complete order rate mengalami penurunan dari waktu ke waktu tanpa pola yang jelas. 
+* Total orders terbesar terjadi pada bulan November dengan order lebih dari 60k. Total orders kedua terbesar terjadi pada bulan Mei dengan order mencapai 30k.
+* Rata-rata grand_total stabil dalam skala harian. Namun, total order tertinggi terjadi pada hari Jumat. Selain itu, tampaknya complete order rate tetap stabil dan sebagian besar di atas 50%.
+* Customer dengan canceled order memiliki median rata-rata bulanan price 3x lebih tinggi daripada customer dengan complete order. Hal ini mungkin menunjukkan bahwa harga yang tinggi merupakan faktor yang menyebabkan customer mengurungkan niat untuk membeli sehingga terjadi pembatalan order.
+* Analisis menunjukkan bahwa order yang dibatalkan memiliki median rata-rata grand total 3x lebih tinggi daripada order yang berhasil sedangkan  diskon secara statistik tidak berdampak signifikan pada complete order rate. Ada kemungkinan bahwa customer membatalkan atau refund order karena produk yang sebenarnya berbeda dari yang diiklankan
+* Retention rate analysis menunjukkan bahwa tingkat retention customers dalam 1 tahun secara keseluruhan tergolong rendah. Hanya rata-rata 5.5% customer melakukan repeat order dalam 90 hari sejak pembelian terakhir mereka. Berdasarkan [Harvard Business School](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers)  mendapatkan customers baru lebih mahal 5-25 kali daripada mempertahankan customers yang ada
+* 50% customers masih aktif dalam melakukan transaksi yaitu di segmen Loyal, Potential, New, dan Champions
+* Segmen prioritas untuk high recency (R 3-4) adalah Champions, Loyal, Potential, dan New
+* Segmen prioritas untuk low recency (R 1-2) adalah At Risk, About to Sleep, dan Can't Lose Them
+
+## Recommendation
+1. Perusahaan disarankan fokus untuk menawarkan lebih banyak produk dalam kisaran harga dibawah 939 seperti "Men's Fashion", "Home & Living", dan "Health & Sports" untuk memenuhi permintaan customer dan meningkatkan kinerja penjualan.
+    * Perlu analisa lebih lanjut untuk produk dengan harga diatas 939, karena beberapa produk memiliki rentang harga yang lebar dan adanya brand yang mengeluarkan produk low-budget.
+2. Minimalisir pemberian diskon karena kurang berdampak pada complete order rate
+3. Perusahaan direkomendasikan berfokus pada promosi penawaran bundel yang lebih kecil, order quantity 1-3  atau menerapkan loyalty program untuk customer yang melakukan order dengan quantity 6-10 untuk memaksimalkan kesempatan complete order demi meningkatkan penjualan.
+    * Jika perusahaan ingin lebih berhati-hati dalam menerapkan strategi promosi, lebih baik berfokus pada order quantity 1-5 dan 11-20 karena secara distribusi memiliki median persentase complete order lebih stabil diatas 55% dan rentang yang lebih sempit.
+4. Perusahaan dapat fokus mempersiapkan volume order yang tinggi di bulan November dan Mei serta mempertimbangkan untuk meningkatkan stock pada bulan tersebut untuk memenuhi permintaan customer
+5. Perusahaan bisa mempertimbangkan untuk menyediakan program cicilan atau memastikan bahwa produk aktual yang dikirim ke customer sesuai dengan iklan untuk meminimalkan jumlah order yang dibatalkan.
+6. Contoh strategi yang dapat digunakan antara lain rekomendasi produk berdasarkan pembelian sebelumnya, loyalty program, cross-selling, upselling, re-engagement emails, follow-up phone calls atau surveys untuk memahami mengapa mereka belum melakukan pembelian akhir-akhir ini. 
+    * Prioritaskan pada segmen Champion, Loyal, Potential, dan New untuk meminimalisir risiko churn
+    * Prioritaskan pada segmen At Risk, About to Sleep, dan Can't Lose Them untuk reactivation customers
