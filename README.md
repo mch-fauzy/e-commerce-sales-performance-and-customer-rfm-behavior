@@ -82,11 +82,11 @@ Terdapat anomali data pada kolom "grand_total" dan "discount_amount", yaitu nila
 
 ## Add New Features (Feature Improvements)
 1. Order Quantity Binning <br>
-`df['qty_bins'] = pd.cut(`
-    `df.qty_ordered,`
-    `bins=[0, 1, 2, 3, 4, 5, 10, 20, 100, 1000],`
-    `include_lowest=True,`
-    `labels=["1", "2", "3", "4", "5", "6-10", "11-20", "21-100", "101-1000"]`
+`df['qty_bins'] = pd.cut(`<br>
+    `df.qty_ordered,`<br>
+    `bins=[0, 1, 2, 3, 4, 5, 10, 20, 100, 1000],`<br>
+    `include_lowest=True,`<br>
+    `labels=["1", "2", "3", "4", "5", "6-10", "11-20", "21-100", "101-1000"]`<br>
 `)`<br>
 
 2. Monthly Period <br>
@@ -96,17 +96,17 @@ Terdapat anomali data pada kolom "grand_total" dan "discount_amount", yaitu nila
 `df["order_quarter"] = df['created_at'].dt.to_period("Q")` <br>
 
 4. Day of Week <br>
-`dow_mapping = {`
-    `0: "Monday",`
-    `1: "Tuesday",`
-    `2: "Wednesday",`
-    `3: "Thursday",`
-    `4: "Friday",`
-    `5: "Saturday",`
-    `6: "Sunday",`
-`}`
+`dow_mapping = {`<br>
+    `0: "Monday",`<br>
+    `1: "Tuesday",`<br>
+    `2: "Wednesday",`<br>
+    `3: "Thursday",`<br>
+    `4: "Friday",`<br>
+    `5: "Saturday",`<br>
+    `6: "Sunday",`<br>
+`}`<br>
 
-`df["day_of_week"] = df['created_at'].dt.dayofweek`
+`df["day_of_week"] = df['created_at'].dt.dayofweek`<br>
 `df["day_of_week"] = df["day_of_week"].map(dow_mapping)` <br>
 
 5. Is Complete Order? <br>
