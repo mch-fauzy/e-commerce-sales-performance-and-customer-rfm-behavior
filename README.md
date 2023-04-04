@@ -20,6 +20,21 @@ Perusahaan E-Commerce ingin mengetahui sales performance dan customer behavior. 
 
 Sebagai Data Analyst, saya bertugas untuk memahami customer behavior dan rekomendasi apa yang dapat diberikan untuk meningkatkan penjualan dan kepuasan pelanggan.
 
+* Berapa rentang harga produk yang sering dibeli customer?
+* Produk apa yang berada pada rentang harga tersebut?
+* Berapa order quantity customer?
+* Apa pengaruh order quantity terhadap status order customer?
+* Apakah ada perbedaan total order dan complete order rate tiap kategori?
+* Bagaimana pola grand total dan total order dari waktu ke waktu?
+* Apa dampak trend terhadap complete order rate?
+* Apakah tidak ada perbedaan distribusi customer dengan Complete Order dan Canceled Order?
+* Apakah ada pengaruh jumlah diskon terhadap complete dan cancel order?
+* Apakah ada pengaruh grand total terhadap complete dan cancel order?
+* Apakah customer masih menggunakan platform e-commerce dalam 1 tahun kebelakang?
+* Apakah ada pola tertentu pada aktivitas customer dalam 1 tahun?
+* Bagaimana distribusi recency, frequency order dan monetary value tiap customer?
+* Apa yang dapat dilakukan oleh perusahaan dari data-data tersebut?
+
 # Data Cleaning and Preparation
 Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa
 
@@ -57,6 +72,7 @@ Karena NaN pada categorical data dibawah 5%, maka NaN akan di imputasi dengan ni
 `df['category_name_1'].fillna(df['category_name_1'].mode()[0], inplace=True)`<br>
 
 ## Data Types Conversion
+Convert tanggal ke datetime dan ID ke string <br>
 `df['created_at'] = pd.to_datetime(df['created_at'])`<br>
 `df['Customer Since'] = pd.to_datetime(df['Customer Since'])`<br>
 `df['item_id'] = df['item_id'].astype('int').astype('str')`<br>
@@ -82,6 +98,7 @@ Terdapat anomali data pada kolom "grand_total" dan "discount_amount", yaitu nila
 
 ## Add New Features (Feature Improvements)
 1. Order Quantity Binning <br>
+Group order quantity menjadi beberapa label seperi 6-10,11-20,dst <br>
 `df['qty_bins'] = pd.cut(`<br>
     `df.qty_ordered,`<br>
     `bins=[0, 1, 2, 3, 4, 5, 10, 20, 100, 1000],`<br>
@@ -90,12 +107,15 @@ Terdapat anomali data pada kolom "grand_total" dan "discount_amount", yaitu nila
 `)`<br>
 
 2. Monthly Period <br>
+Buat fitur baru berdasarkan orde bulanan <br>
 `df["order_month"] = df['created_at'].dt.to_period("M")` <br>
 
 3. Quarter Period <br>
+Buat fitur baru berdasarkan orde kuartal <br>
 `df["order_quarter"] = df['created_at'].dt.to_period("Q")` <br>
 
 4. Day of Week <br>
+Buat fitur baru berdasarkan orde day of week <br>
 `dow_mapping = {`<br>
     `0: "Monday",`<br>
     `1: "Tuesday",`<br>
@@ -110,6 +130,7 @@ Terdapat anomali data pada kolom "grand_total" dan "discount_amount", yaitu nila
 `df["day_of_week"] = df["day_of_week"].map(dow_mapping)` <br>
 
 5. Is Complete Order? <br>
+Buat fitur baru sebagai indikator apakah customer menyelesaikan order atau tidak <br>
 `df["is_complete"] = df['status'].apply(lambda x: 1 if x in ["COMPLETE"] else 0)` <br>
 
 # Exploratory Data Analysis
