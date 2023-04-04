@@ -9,6 +9,7 @@
 [Business Understanding](#Business-Understanding)<br>
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
 [Exploratory Data Analysis](#Exploratory-Data-Analysis)<br>
+ * [Product Price](##Product-Price)<br>
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
@@ -135,10 +136,6 @@ Buat fitur baru sebagai indikator apakah customer menyelesaikan order atau tidak
 `df["is_complete"] = df['status'].apply(lambda x: 1 if x in ["COMPLETE"] else 0)` <br>
 
 # Exploratory Data Analysis
-**Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:**<br>
-**[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** <br>
-
-Dibawah ini adalah rumusan masalah yang hendak dijawab oleh analisa kali ini
 ## Product Price
 
 Untuk menjawab pertanyaan berikut:
@@ -213,10 +210,6 @@ Analisa RFM dilakukan dengan mengecualikan order yang fraud
 NB: Average Order Value tidak diterapkan karena distribusi price tidak normal sehingga missleading dalam perancangan strategi. Contohnya AOV tinggi dengan price tinggi tapi order rendah, sekilas menunjukan performance yang bagus tetapi jika ditinjau secara quantity, akan menunjukan quantity penjualan yang rendah. <br>
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis9.jpg">
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis10.jpg">
-
-
-**Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:**<br>
-**[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** <br>
 
 # Conclusion and Recommendation
 ## Conclusion
