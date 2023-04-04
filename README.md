@@ -36,7 +36,8 @@ Sebagai Data Analyst, saya bertugas untuk memahami customer behavior dan rekomen
 * Apa yang dapat dilakukan oleh perusahaan dari data-data tersebut?
 
 # Data Cleaning and Preparation
-Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa
+Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa <br>
+[!data_prep](https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/data_preprocessing.jpg)
 
 ## Drop Unused Columns
 Kolom-kolom berikut akan di drop karena tidak digunakan dalam analisa:<br>
