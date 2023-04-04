@@ -8,9 +8,8 @@
 
 [Business Understanding](#Business-Understanding)<br>
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
-[Exploratory Data Analysis](#Exploratory-Data-Analysis)<br>
+[Exploratory Data Analysis](#Exploratory-Data-Analysis)
  * [Product Price](#Product-Price)<br>
-
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
