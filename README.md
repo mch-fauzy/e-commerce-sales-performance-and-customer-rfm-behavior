@@ -145,7 +145,7 @@ Untuk menjawab pertanyaan berikut:
 * Berapa rentang harga produk yang sering dibeli customer?
 * Produk apa yang berada pada rentang harga tersebut?
 
-Akan dilakukan analisa terhadap harga dan kategori produk
+Akan dilakukan analisa terhadap harga dan kategori produk <br>
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis1.jpg">
 
 ## Order Quantity Frequency
