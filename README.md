@@ -10,7 +10,13 @@
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
 [Exploratory Data Analysis](#Exploratory-Data-Analysis)<br>
 1. [Product Price](#Product-Price)<br>
-2. [Order Quantity Frequency](##Order-Quantity-Frequency)<br>
+2. [Order Quantity Frequency](#Order-Quantity-Frequency)<br>
+3. [Order by Category](#Order-by-Category)<br>
+4. [Trends of Grand Total and Total Orders](#Trends-of-Grand-Total-and-Total-Orders)<br>
+5. [Monthly Product Price by Order Status](#Monthly-Product-Price-by-Order-Status)<br>
+6. [Monthly Discount Amount and Grand Total by Order Status](#Monthly-Discount-Amount-and-Grand-Total-by-Order-Status)<br>
+7. [Retention Last 1 Year](#Retention-Last-1-Year)<br>
+8. [RFM](#RFM)<br>
 
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
