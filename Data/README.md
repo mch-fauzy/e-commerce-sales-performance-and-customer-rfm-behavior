@@ -9,6 +9,15 @@
 [Business Understanding](#Business-Understanding)<br>
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
 [Exploratory Data Analysis](#Exploratory-Data-Analysis)<br>
+1. [Product Price](#Product-Price)<br>
+2. [Order Quantity Frequency](#Order-Quantity-Frequency)<br>
+3. [Order by Category](#Order-by-Category)<br>
+4. [Trends of Grand Total and Total Orders](#Trends-of-Grand-Total-and-Total-Orders)<br>
+5. [Monthly Product Price by Order Status](#Monthly-Product-Price-by-Order-Status)<br>
+6. [Monthly Discount Amount and Grand Total by Order Status](#Monthly-Discount-Amount-and-Grand-Total-by-Order-Status)<br>
+7. [Retention Last 1 Year](#Retention-Last-1-Year)<br>
+8. [RFM](#RFM)<br>
+
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
@@ -36,7 +45,8 @@ Sebagai Data Analyst, saya bertugas untuk memahami customer behavior dan rekomen
 * Apa yang dapat dilakukan oleh perusahaan dari data-data tersebut?
 
 # Data Cleaning and Preparation
-Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa
+Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa <br>
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/data_preprocessing.jpg">
 
 ## Drop Unused Columns
 Kolom-kolom berikut akan di drop karena tidak digunakan dalam analisa:<br>
@@ -134,17 +144,14 @@ Buat fitur baru sebagai indikator apakah customer menyelesaikan order atau tidak
 `df["is_complete"] = df['status'].apply(lambda x: 1 if x in ["COMPLETE"] else 0)` <br>
 
 # Exploratory Data Analysis
-**Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:**<br>
-**[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** <br>
-
-Dibawah ini adalah rumusan masalah yang hendak dijawab oleh analisa kali ini
 ## Product Price
 
 Untuk menjawab pertanyaan berikut:
 * Berapa rentang harga produk yang sering dibeli customer?
 * Produk apa yang berada pada rentang harga tersebut?
 
-Akan dilakukan analisa terhadap harga dan kategori produk
+Akan dilakukan analisa terhadap harga dan kategori produk <br>
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis1.jpg">
 
 ## Order Quantity Frequency
 
@@ -152,14 +159,16 @@ Untuk menjawab pertanyaan berikut:
 * Berapa order quantity customer?
 * Apa pengaruh order quantity terhadap status order customer?
 
-Akan dilakukan analisa order quantity berdasarkan status ordernya
+Akan dilakukan analisa order quantity berdasarkan status ordernya<br>
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis2.jpg">
 
 ## Order by Category
 
 Untuk menjawab pertanyaan berikut:
 * Apakah ada perbedaan total order dan complete order rate tiap kategori
 
-Akan dilakukan analisa total order dan complete rate berdasarkan produk catogry
+Akan dilakukan analisa total order dan complete rate berdasarkan produk catogry<br>
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis3.jpg">
 
 ## Trends of Grand Total and Total Orders
 
@@ -167,14 +176,17 @@ Untuk menjawab pertanyaan berikut:
 * Bagaimana pola grand total dan total order dari waktu ke waktu?
 * Apa dampaknya terhadap complete order rate
 
-Akan dilakukan analisa grand total (setelah diskon) tiap order secara quarter dan bulanan beserta rasio complete order
+Akan dilakukan analisa grand total (setelah diskon) tiap order secara quarter dan bulanan beserta rasio complete order<br>
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis4.jpg">
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis5.jpg">
 
 ## Monthly Product Price by Order Status
 
 Untuk menjawab pertanyaan berikut:
 * Apakah tidak ada perbedaan distribusi customer dengan Complete Order dan Canceled Order?
 
-Akan dilakukan analisa terhadap rata-rata harga bulanan berdasarkan status ordernya
+Akan dilakukan analisa terhadap rata-rata harga bulanan berdasarkan status ordernya<br>
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis6.jpg">
 
 ## Monthly Discount Amount and Grand Total by Order Status
 
@@ -182,7 +194,8 @@ Untuk menjawab pertanyaan berikut:
 * Apakah ada pengaruh jumlah diskon terhadap complete dan cancel order?
 * Apakah ada pengaruh grand total terhadap complete dan cancel order?
 
-Akan dilakukan analisa jumlah diskon dan grand total berdasarkan status ordernya
+Akan dilakukan analisa jumlah diskon dan grand total berdasarkan status ordernya<br>
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis7.jpg">
 
 ## Retention Last 1 Year
 
@@ -190,7 +203,8 @@ Untuk menjawab pertanyaan berikut:
 * Apakah customer masih menggunakan platform e-commerce dalam 1 tahun kebelakang?
 * Apakah ada pola tertentu pada aktivitas customer dalam 1 tahun?
 
-Analisa Retention dilakukan dengan mengecualikan order yang fraud
+Analisa Retention dilakukan dengan mengecualikan order yang fraud<br>
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis8.jpg">
 
 ## RFM
 
@@ -201,10 +215,9 @@ Analisa RFM dilakukan dengan mengecualikan order yang fraud
 
 [RFM segmentation references](https://github.com/daniel-isidro/customer_segmentation)
 
-NB: Average Order Value tidak diterapkan karena distribusi price tidak normal sehingga missleading dalam perancangan strategi. Contohnya AOV tinggi dengan price tinggi tapi order rendah, sekilas menunjukan performance yang bagus tetapi jika ditinjau secara quantity, akan menunjukan quantity penjualan yang rendah.
-
-**Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:**<br>
-**[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** <br>
+NB: Average Order Value tidak diterapkan karena distribusi price tidak normal sehingga missleading dalam perancangan strategi. Contohnya AOV tinggi dengan price tinggi tapi order rendah, sekilas menunjukan performance yang bagus tetapi jika ditinjau secara quantity, akan menunjukan quantity penjualan yang rendah. <br>
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis9.jpg">
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis10.jpg">
 
 # Conclusion and Recommendation
 ## Conclusion
