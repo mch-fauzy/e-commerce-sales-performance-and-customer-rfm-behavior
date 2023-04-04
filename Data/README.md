@@ -143,6 +143,10 @@ Buat fitur baru berdasarkan orde day of week <br>
 Buat fitur baru sebagai indikator apakah customer menyelesaikan order atau tidak <br>
 `df["is_complete"] = df['status'].apply(lambda x: 1 if x in ["COMPLETE"] else 0)` <br>
 
+## Check/Drop Duplicate Data <br>
+`df.duplicated().sum()`<br>
+Tidak ditemukan data duplikat
+
 # Exploratory Data Analysis
 ## Product Price
 
