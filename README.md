@@ -116,7 +116,7 @@ Terdapat anomali data pada kolom "grand_total" dan "discount_amount", yaitu nila
 **Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:**<br>
 **[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** <br>
 
-Dibawah ini adalah rumusan masalah yang hendak dijawab oleh analisa kali ini <br>
+Dibawah ini adalah rumusan masalah yang hendak dijawab oleh analisa kali ini
 ## Product Price
 
 Untuk menjawab pertanyaan berikut:
@@ -181,6 +181,9 @@ Analisa RFM dilakukan dengan mengecualikan order yang fraud
 [RFM segmentation references](https://github.com/daniel-isidro/customer_segmentation)
 
 NB: Average Order Value tidak diterapkan karena distribusi price tidak normal sehingga missleading dalam perancangan strategi. Contohnya AOV tinggi dengan price tinggi tapi order rendah, sekilas menunjukan performance yang bagus tetapi jika ditinjau secara quantity, akan menunjukan quantity penjualan yang rendah.
+
+**Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:**<br>
+**[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** <br>
 
 # Conclusion and Recommendation
 ## Conclusion
