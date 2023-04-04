@@ -10,6 +10,8 @@
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
 [Exploratory Data Analysis](#Exploratory-Data-Analysis)<br>
 1. [Product Price](#Product-Price)<br>
+2. [Order Quantity Frequency](##Order-Quantity-Frequency)<br>
+
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
