@@ -135,7 +135,6 @@ Buat fitur baru berdasarkan orde day of week <br>
     `5: "Saturday",`<br>
     `6: "Sunday",`<br>
 `}`<br>
-
 `df["day_of_week"] = df['created_at'].dt.dayofweek`<br>
 `df["day_of_week"] = df["day_of_week"].map(dow_mapping)` <br>
 
