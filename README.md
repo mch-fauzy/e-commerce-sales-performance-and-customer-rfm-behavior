@@ -1,7 +1,7 @@
-# Pakistan E-Commerce Sales Performance and Customer RFM Behavior
-| Report (PDF) | Dashboard |
+# **Pakistan E-Commerce Sales Performance and Customer RFM Behavior**
+| **Report (PDF)** | **Dashboard** |
 |:---:|:---:|
-| [Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing) | [Tableau Story](https://public.tableau.com/views/PakistanE-CommerceSalesPerformanceandCustomerRFMBehaviour/DashboardStory?:language=en-US&:display_count=n&:origin=viz_share_link)
+| **[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** | **[Tableau Story](https://public.tableau.com/views/PakistanE-CommerceSalesPerformanceandCustomerRFMBehaviour/DashboardStory?:language=en-US&:display_count=n&:origin=viz_share_link)**
 
 
 # Table of Contents
@@ -113,8 +113,74 @@ Terdapat anomali data pada kolom "grand_total" dan "discount_amount", yaitu nila
 `df["is_complete"] = df['status'].apply(lambda x: 1 if x in ["COMPLETE"] else 0)` <br>
 
 # Exploratory Data Analysis
-Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:<br>
-[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)
+**Untuk saat ini anda bisa mengakses hasil analisa pada link berikut:**<br>
+**[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** <br>
+
+Dibawah ini adalah rumusan masalah yang hendak dijawab oleh analisa kali ini <br>
+## Product Price
+
+Untuk menjawab pertanyaan berikut:
+* Berapa rentang harga produk yang sering dibeli customer?
+* Produk apa yang berada pada rentang harga tersebut?
+
+Akan dilakukan analisa terhadap harga dan kategori produk
+
+## Order Quantity Frequency
+
+Untuk menjawab pertanyaan berikut:
+* Berapa order quantity customer?
+* Apa pengaruh order quantity terhadap status order customer?
+
+Akan dilakukan analisa order quantity berdasarkan status ordernya
+
+## Order by Category
+
+Untuk menjawab pertanyaan berikut:
+* Apakah ada perbedaan total order dan complete order rate tiap kategori
+
+Akan dilakukan analisa total order dan complete rate berdasarkan produk catogry
+
+## Trends of Grand Total and Total Orders
+
+Untuk menjawab pertanyaan berikut:
+* Bagaimana pola grand total dan total order dari waktu ke waktu?
+* Apa dampaknya terhadap complete order rate
+
+Akan dilakukan analisa grand total (setelah diskon) tiap order secara quarter dan bulanan beserta rasio complete order
+
+## Monthly Product Price by Order Status
+
+Untuk menjawab pertanyaan berikut:
+* Apakah tidak ada perbedaan distribusi customer dengan Complete Order dan Canceled Order?
+
+Akan dilakukan analisa terhadap rata-rata harga bulanan berdasarkan status ordernya
+
+## Monthly Discount Amount and Grand Total by Order Status
+
+Untuk menjawab pertanyaan berikut:
+* Apakah ada pengaruh jumlah diskon terhadap complete dan cancel order?
+* Apakah ada pengaruh grand total terhadap complete dan cancel order?
+
+Akan dilakukan analisa jumlah diskon dan grand total berdasarkan status ordernya
+
+## Retention Last 1 Year
+
+Untuk menjawab pertanyaan berikut:
+* Apakah customer masih menggunakan platform e-commerce dalam 1 tahun kebelakang?
+* Apakah ada pola tertentu pada aktivitas customer dalam 1 tahun?
+
+Analisa Retention dilakukan dengan mengecualikan order yang fraud
+
+## RFM
+
+Untuk menjawab pertanyaan berikut:
+* Bagaimana distribusi recency, frequency order dan monetary value tiap customer?
+
+Analisa RFM dilakukan dengan mengecualikan order yang fraud
+
+[RFM segmentation references](https://github.com/daniel-isidro/customer_segmentation)
+
+NB: Average Order Value tidak diterapkan karena distribusi price tidak normal sehingga missleading dalam perancangan strategi. Contohnya AOV tinggi dengan price tinggi tapi order rendah, sekilas menunjukan performance yang bagus tetapi jika ditinjau secara quantity, akan menunjukan quantity penjualan yang rendah.
 
 # Conclusion and Recommendation
 ## Conclusion
