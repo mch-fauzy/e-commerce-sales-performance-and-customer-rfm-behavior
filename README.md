@@ -146,6 +146,7 @@ Untuk menjawab pertanyaan berikut:
 * Produk apa yang berada pada rentang harga tersebut?
 
 Akan dilakukan analisa terhadap harga dan kategori produk
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis1.jpg">
 
 ## Order Quantity Frequency
 
